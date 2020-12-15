@@ -20,8 +20,9 @@ class Rope {
         
         push();
         strokeWeight(5);
-        stroke("black");
-        line(pointA.x,pointA.y,pointB.x,pointB.y);
+        stroke("white");
+        //translate(200,200)
+        line(pointA.x,pointA.y,50,50);
         pop();
     }
 }
