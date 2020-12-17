@@ -8,8 +8,8 @@ class Rope {
           bodyA: body1,
           bodyB: body2,
           pointB:{x:this.offsetX,y:this.offsetY},
-         // length: 10,
-         // stiffness: 0.04
+          //length: 10,
+          //stiffness: 1
         }
         this.rope = Constraint.create(options);
         World.add(world,this.rope);
@@ -22,7 +22,7 @@ class Rope {
         strokeWeight(5);
         stroke("white");
         //translate(200,200)
-        line(pointA.x,pointA.y,50,50);
+        line(pointA.x,pointA.y,pointB.x+this.offsetX,pointB.y+this.offsetY);
         pop();
     }
 }

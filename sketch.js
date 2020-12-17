@@ -31,11 +31,10 @@ function setup() {
   roof = new Roof(width/2,100,800,15);
   
   rope1 = new Rope(bob1.body,roof.body,50,0);
- // translate(100,50);
-  rope2 = new Rope(bob2.body,roof.body,150,0)
-  rope3 = new Rope(bob3.body,roof.body,200,0);
-  rope4 = new Rope(bob4.body,roof.body,250,0);
-  rope5 = new Rope(bob5.body,roof.body,300,0);
+  rope2 = new Rope(bob2.body,roof.body,100,0)
+  rope3 = new Rope(bob3.body,roof.body,150,0);
+  rope4 = new Rope(bob4.body,roof.body,200,0);
+  rope5 = new Rope(bob5.body,roof.body,250,0);
 
 	Engine.run(engine);
   
@@ -60,6 +59,15 @@ function draw() {
   drawSprites();
  
 }
+function keyPressed(){
+  if(keyCode === UP_ARROW){
+    Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-95,y:-95});
+  }
+  if(keyCode === DOWN_ARROW){
+    Matter.Body.applyForce(bob5.body,bob5.body.position,{x:100,y:100});
+  }
+}   
+     
 
 
 
